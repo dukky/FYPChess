@@ -1,8 +1,6 @@
-package im.duk.fyp.chess.engine.board.bitboard;
+package im.duk.fyp.chess.engine.board;
 
 import java.util.Arrays;
-
-import im.duk.fyp.chess.engine.board.Board;
 
 /**
  * Bitboard representation of a chess board.
@@ -56,6 +54,23 @@ public class BitBoard implements Board {
 		}
 	}
 	
+	/**
+	 * Copy constructor
+	 * @param position
+	 */
+	public BitBoard(BitBoard position) {
+		board = new long[2][6];
+		for(int i = 0; i < board.length; ++i) {
+			board[i] = Arrays.copyOf(position.board[i], position.board[i].length);
+		}
+	}
+	
+	@Override
+	public Piece at(int rank, int file) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	public @Override String toString() {
 		// TODO
 		return null;
@@ -71,5 +86,18 @@ public class BitBoard implements Board {
 		long[][] second = new BitBoard().board;
 		System.out.println(Arrays.deepEquals(first, second));
 	}
+
+	@Override
+	public Piece[] file(int file) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Piece[] rank(int rank) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
