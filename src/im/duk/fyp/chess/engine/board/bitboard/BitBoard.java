@@ -52,12 +52,7 @@ public class BitBoard implements Board {
 	public BitBoard() {
 		board = new long[2][6];
 		for(int i = 0; i < board.length; ++i) {
-			board[i][KING] = DEFAULT_POSITION[i][KING];
-			board[i][QUEEN] = DEFAULT_POSITION[i][QUEEN];
-			board[i][ROOK] = DEFAULT_POSITION[i][ROOK];
-			board[i][KNIGHT] = DEFAULT_POSITION[i][KNIGHT];
-			board[i][BISHOP] = DEFAULT_POSITION[i][BISHOP];
-			board[i][PAWN] = DEFAULT_POSITION[i][PAWN];
+			board[i] = Arrays.copyOf(DEFAULT_POSITION[i], DEFAULT_POSITION[i].length);
 		}
 	}
 	
