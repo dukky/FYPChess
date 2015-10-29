@@ -1,5 +1,10 @@
 package im.duk.fyp.chess.engine.board;
 
+/**
+ * Enum to represent a piece
+ * @author andreas
+ *
+ */
 public enum Piece {
 	
 	WHITE_PAWN,

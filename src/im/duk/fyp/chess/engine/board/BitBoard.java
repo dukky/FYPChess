@@ -76,16 +76,6 @@ public class BitBoard implements Board {
 		return null;
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(Long.toHexString(new BitBoard().board[WHITE][QUEEN]));
-		
-		
-		// Test equality of copy
-		
-		long[][] first = DEFAULT_POSITION;
-		long[][] second = new BitBoard().board;
-		System.out.println(Arrays.deepEquals(first, second));
-	}
 
 	@Override
 	public Piece[] file(int file) {
@@ -99,5 +89,16 @@ public class BitBoard implements Board {
 		return null;
 	}
 
+	public static void main(String[] args) {
+		System.out.println(Long.toHexString(new BitBoard().board[WHITE][QUEEN]));
+		
+		
+		// Test equality of copy
+		
+		long[][] first = DEFAULT_POSITION;
+		long[][] second = new BitBoard().board;
+		System.out.println(Arrays.deepEquals(first, second));
+		
+	}
 
 }
